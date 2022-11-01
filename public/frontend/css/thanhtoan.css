@@ -1,0 +1,69 @@
+.payment-cart .container .row > h4 {
+	font-size: 2rem;
+	width: 100%;
+	padding: .5rem 0;
+	color: black;
+	border-top: 1px solid slategrey;
+	border-bottom: 1px solid slategrey;
+}
+.payment-cart{
+	padding-bottom:2rem;
+	background: rgb(212, 219, 224);
+}
+.payment-cart .container .row .payment-two .payment-left .payment-home {
+	width: 100%;
+	margin: .5rem;
+	padding: 0 .5rem;
+}
+
+.payment-cart .container .row .payment-two .payment-right .form-group {
+	line-height: 1rem;
+}
+
+.payment-cart .container .row .payment-two .payment-right .form-group > label {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+.payment-cart .container .row .payment-two .payment-right .form-group .form-control {
+	text-transform: capitalize;
+}
+
+.payment-cart .container .row .payment-two .payment-right .form-group .form-control option {
+	text-transform: capitalize;
+	color: black;
+}
+
+.payment-cart .container .row .payment-two .payment-right .shop_table-one {
+	width: 100%;
+}
+
+.payment-cart .container .row .payment-two .payment-right .shop_table-one > tbody .cart-subtotal-one {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+
+.payment-cart .container .row .payment-two .payment-right .shop_table-one > tbody .cart-subtotal-one > th {
+	font-size: 1.2rem;
+}
+
+.payment-cart .container .row .payment-two .payment-right .shop_table-one > tbody .cart-subtotal-one > td span {
+	font-size: 1.2rem;
+	font-weight: 600;
+	color: black;
+}
+
+.payment-cart .container .row .payment-two .payment-right .submit-agileits > input {
+	font-size: 1.2rem;
+	font-weight: 700;
+	width: 100%;
+	cursor: pointer;
+	border-radius: 3px;
+	background: #ff6801;
+}
+
+.payment-cart .container .row .payment-two .payment-right .submit-agileits > input:hover {
+	background: #54da17;
+}
+

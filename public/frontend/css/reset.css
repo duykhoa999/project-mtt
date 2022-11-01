@@ -1,0 +1,53 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+body {
+	background: #e5e5e5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+div,
+a {
+	font-family: 'SVN-Product Sans';
+}
+
+p,
+span,
+li {
+	font-family: 'Roboto';
+}
+
+input {
+	border: none;
+	outline: none;
+}
+
+button {
+	border: none;
+	outline: none;
+	background: none;
+}
+
+.container {
+	max-width: 1230px;
+	margin: 0 auto;
+}
+

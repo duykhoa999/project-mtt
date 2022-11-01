@@ -1,0 +1,156 @@
+.flex {
+	line-height: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.a-start {
+	align-items: flex-start;
+}
+
+.a-center {
+	align-items: center;
+}
+
+.center {
+	text-align: center;
+}
+
+.j-between {
+	justify-content: space-between;
+}
+
+.section-login {
+	display: flex;
+	min-height: 45rem;
+	background-image: url(../img/gym.png);
+	align-items: center;
+	justify-content: center;
+}
+
+.section-login .form-background {
+	padding: 1rem;
+	border: 1px solid #ff6801;
+	border-radius: 1rem;
+	background: white;
+}
+
+.section-login .form-background > h3 {
+	font-weight: 700;
+	padding-top: 2rem;
+	text-align: center;
+}
+
+.section-login .form-background .icon {
+	margin: 20px 0;
+	text-align: center;
+}
+
+.section-login .form-background .icon > a {
+	display: inline-flex;
+	width: 40px;
+	height: 40px;
+	margin: 0 5px;
+	text-decoration: none;
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	justify-content: center;
+	align-items: center;
+}
+
+.section-login .form-background .icon > a:hover {
+	color: white;
+	background: #ff6801;
+}
+
+.section-login .form-background .form #login-form {
+	width: 100%;
+}
+
+.section-login .form-background .form #login-form .form-group {
+	display: flex;
+	width: 100%;
+}
+
+.section-login .form-background .form #login-form .form-group .form-item > h2 {
+	font-size: 26px;
+	font-weight: 700;
+	margin: 0.5rem 0;
+}
+
+.section-login .form-background .form #login-form .form-group .form-item > label {
+	font-size: 16px;
+	font-weight: 700;
+}
+
+.section-login .form-background .form #login-form .form-group .form-item .btn-login {
+	font-size: 14px;
+	font-weight: 700;
+	padding: 0.7rem 1.5rem;
+	cursor: pointer;
+	color: #ff6801;
+	border: 1px solid #ff6801;
+	border-radius: 5px;
+	background: white;
+}
+
+.section-login .form-background .form #login-form .form-group .form-item .btn-login:hover {
+	color: white;
+	border: 1px solid #ff6801;
+	background: #ff6801;
+}
+
+.section-login .form-background .form #login-form .form-group .form-item .miss {
+	font-size: 14px;
+	font-weight: 700;
+	display: flex;
+	width: 100%;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+	color: #ff6801;
+	border: 1px solid #ff6801;
+	border-radius: 5px;
+	background: white;
+	justify-content: center;
+}
+
+.section-login .form-background .form #login-form .form-group .form-item .miss:hover {
+	color: white;
+	border: 1px solid #ff6801;
+	background: #ff6801;
+}
+
+.section-login .form-background .form #login-form .form-group .form-item .miss {
+	font-size: 14px;
+	font-weight: 700;
+	display: flex;
+	padding: 0.7rem 1.5rem;
+	text-decoration: none;
+	color: #ff6801;
+	border: 1px solid #ff6801;
+	border-radius: 5px;
+	background: white;
+	justify-content: center;
+}
+
+.section-login .form-background .form #login-form .form-group .form-item .miss:hover {
+	color: white;
+	border: 1px solid #ff6801;
+	background: #ff6801;
+}
+
+.section-login .form-background .form #login-form .form-group .form-item .creat {
+	font-size: 14px;
+	font-weight: 600;
+	padding: 0.6rem 1.8rem;
+	text-decoration: none;
+	color: #ff6801;
+	border: 1px solid #ff6801;
+	border-radius: 7px;
+}
+
+.section-login .form-background .form #login-form .form-group .form-item .creat:hover {
+	color: white;
+	border: 1px solid #ff6801;
+	background: #ff6801;
+}

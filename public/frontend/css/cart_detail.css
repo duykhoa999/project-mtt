@@ -1,0 +1,229 @@
+section {
+	background: white;
+}
+
+section .products-brand .container .detail-products {
+	padding-bottom: 1rem;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left h1 {
+	font-size: 1.7rem;
+	font-weight: 600;
+	text-transform: capitalize;
+	color: black;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left .is-xlarge {
+	margin-top: .7rem;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left .is-xlarge b {
+	font-size: 1.4rem;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left .is-xlarge > span {
+	font-size: 1.4rem;
+	font-weight: 700;
+	color: #ff6801;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left .quantity {
+	margin-top: .5rem;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left .quantity label {
+	font-size: 1.4rem;
+	font-weight: 600;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left .quantity .cart_detail {
+	font-weight: 700;
+	width: 3rem;
+	height: 2rem;
+	margin-left: 1rem;
+	text-align: center;
+	border: 1px solid #9e9999;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left .add-to-cart {
+	font-size: 1.4rem;
+	margin: .8rem 0;
+	padding: .5rem 1.5rem;
+	cursor: pointer;
+	text-transform: capitalize;
+	border: 1px solid #ff6801;
+	background: #ff6801;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left .add-to-cart:hover {
+	border: 1px solid #565850;
+	background: #565850;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left .note {
+	line-height: 1rem;
+	margin-top: 1.5rem;
+}
+
+section .products-brand .container .detail-products .row .padding-right .text-left .note p {
+	font-size: 1rem;
+	text-transform: capitalize;
+	color: black;
+}
+
+section .products-brand .container .shop-details-tab {
+	margin-right: 15px;
+	margin-left: 15px;
+	padding-bottom: 10px;
+}
+
+section .products-brand .container .shop-details-tab ul {
+	border-bottom: 1px solid #fe980f;
+	background: #40403e;
+}
+
+section .products-brand .container .shop-details-tab ul > a {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	margin-right: 0;
+	margin-left: 0;
+	padding: .5rem;
+	cursor: default;
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #555;
+}
+
+section .products-brand .container .shop-details-tab ul > a:hover {
+	background: #ff6801;
+}
+
+section .products-brand .container .shop-details-tab ul a.active {
+	background: #ff6801;
+}
+
+section .products-brand .container .shop-details-tab .tab-content {
+	margin-right: 15px;
+	margin-left: 15px;
+	padding: 15px;
+	border: 1px solid #f7f4f0;
+	background: white;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane > p {
+	font-size: 1rem;
+	line-height: 2rem;
+	color: #333;
+	border-bottom: 1px solid #a8a4a4;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews > p {
+	font-size: 1.3rem;
+	text-transform: capitalize;
+	color: black;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews #comment_show .style_comment {
+	margin: .5rem 0;
+	background: #f0f0e9;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews #comment_show .style_comment .comment-cart {
+	line-height: 1rem;
+	margin: .5rem 0;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews #comment_show .style_comment .comment-cart .name-user {
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: capitalize;
+	color: #013cff;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews #comment_show .style_comment .comment-cart .name-user .fas {
+	font-size: 1rem;
+	padding-right: .5rem;
+	color: #ff6801;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews #comment_show .style_comment .comment-cart .date {
+	font-size: 1rem;
+	color: #3a3838;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews #comment_show .style_comment .comment-cart .date .far {
+	font-size: 1rem;
+	padding-right: .5rem;
+	color: #ff6801;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews #comment_show .style_comment .comment-cart .comment {
+	font-size: 1rem;
+	color: #000;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews #comment_show .style_comment .comment-cart .comment .fas {
+	font-size: 1rem;
+	padding-right: .5rem;
+	color: #ff6801;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews #comment_show .style_comment .comment-cart .response {
+	font-size: 1rem;
+	padding-left: 4rem;
+	color: #000;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews #comment_show .style_comment .comment-cart .response .fas {
+	font-size: 1rem;
+	padding-right: .5rem;
+	color: #ff6801;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews form span input {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	width: 100%;
+	margin-bottom: 1rem;
+	margin-left: 0;
+	padding: 8px;
+	color: black;
+	border: 0 none;
+	outline: medium none;
+	background: #f0f0e9;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews form > textarea {
+	width: 100%;
+	height: 195px;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	padding-top: 15px;
+	padding-left: 10px;
+	resize: none;
+	color: black;
+	border: medium none;
+	outline: medium none;
+	background: #f0f0e9;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews form .send-comment {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fff;
+	border: 0 none;
+	border-radius: 5px;
+	background: #fe980f;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews form .send-comment .far {
+	padding-right: 4px;
+	text-align: center;
+}
+
+section .products-brand .container .shop-details-tab .tab-content .tab-pane-reviews form .send-comment:hover {
+	color: black;
+	background: #6b665f;
+}
+

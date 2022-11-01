@@ -1,0 +1,187 @@
+section {
+	background: white;
+}
+
+section .customer-user .container .row .user-left {
+	height: 700px;
+	background: #c4bebb;
+}
+
+section .customer-user .container .row .user-left .acount {
+	display: flex;
+	margin-bottom: 1rem;
+	align-items: center;
+	justify-content: space-around;
+}
+
+section .customer-user .container .row .user-left .acount > img {
+	border-radius: 50%;
+}
+
+section .customer-user .container .row .user-left .acount .customer {
+	line-height: .5rem;
+}
+
+section .customer-user .container .row .user-left .acount .customer > p {
+	font-size: 1rem;
+	color: black;
+}
+
+section .customer-user .container .row .user-left .acount .customer > span {
+	font-size: 1rem;
+	font-weight: 700;
+	text-transform: capitalize;
+	color: black;
+}
+
+section .customer-user .container .row .user-left .usercart {
+	margin: .5rem 0;
+	padding: .6rem 0;
+	cursor: pointer;
+	border: 1px solid #ff6801;
+	background: #918d8b;
+}
+
+section .customer-user .container .row .user-left .usercart:hover {
+	background: white;
+}
+
+section .customer-user .container .row .user-left .usercart.active {
+	background: white;
+}
+
+section .customer-user .container .row .user-left .usercart > .cart-user {
+	display: flex;
+	width: 100%;
+	padding-left: 1rem;
+	text-decoration: none;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+section .customer-user .container .row .user-left .usercart > .cart-user .fas {
+	color: #ff6801;
+}
+
+section .customer-user .container .row .user-left .usercart > .cart-user span {
+	font-size: 1rem;
+	font-weight: 600;
+	padding-left: 1.5rem;
+	color: black;
+}
+
+section .customer-user .container .row .user-right {
+	border-left: 1px solid red;
+	background: white;
+}
+
+section .customer-user .container .row .user-right .usercontent {
+	display: none;
+	padding-top: 7rem;
+}
+
+section .customer-user .container .row .user-right .usercontent.active {
+	display: block;
+}
+
+section .customer-user .container .row .user-right .usercontent h1 {
+	font-size: 1.5rem;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .customer_name {
+	display: flex;
+	margin: 0 0 15px;
+	align-items: center;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .customer_name > label {
+	font-size: 1rem;
+	font-weight: 700;
+	width: 110px;
+	min-width: 110px;
+	color: #0e0d0d;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .customer_name > input {
+	width: 300px;
+	padding: .5rem;
+	text-transform: capitalize;
+	border: 1px solid slategrey;
+	background: #f2f5f8;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .customer_name textarea {
+	width: 300px;
+	padding: .5rem;
+	border: 1px solid slategrey;
+	background: #f5f8fc;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .item-form {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .item-form > button {
+	font-size: 1rem;
+	font-weight: 700;
+	padding: .5rem 1rem;
+	cursor: pointer;
+	color: black;
+	border: 1px solid #ff6801;
+	border-radius: 3px;
+	background: #918d8b;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .item-form > button:hover {
+	background: #ff6801;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .item-form > button .fas {
+	padding-right: .3rem;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .password-show {
+	display: flex;
+	margin: 0 0 15px;
+	align-items: center;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .password-show > input {
+	width: 300px;
+	padding: .5rem;
+	text-transform: capitalize;
+	border: 1px solid slategrey;
+	background: #f2f5f8;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .password-show > label {
+	font-size: 1rem;
+	font-weight: 700;
+	width: 110px;
+	min-width: 110px;
+	color: #0e0d0d;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .btn-pass {
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .btn-pass > button {
+	font-size: 1rem;
+	font-weight: 700;
+	padding: .5rem 1rem;
+	cursor: pointer;
+	color: black;
+	border: 1px solid #ff6801;
+	border-radius: 3px;
+	background: #918d8b;
+}
+
+section .customer-user .container .row .user-right .usercontent > form .btn-pass > button:hover {
+	background: #ff6801;
+}
+
