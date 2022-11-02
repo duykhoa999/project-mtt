@@ -5,13 +5,13 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
-class CustomerController extends AppController
+class ProductController extends AppController
 {
-    const NAME = '/customer/';
+    const NAME = '/product/';
 
     public function __construct()
     {
-        View::share('controller', config('define.controller.admin.customer'));
+        View::share('controller', config('define.controller.admin.product'));
 		parent::__construct();
     }
     /**
@@ -21,15 +21,14 @@ class CustomerController extends AppController
      */
     public function index()
     {
-        $all_customer = [];
+        $all_product = [];
 
         $data = $this->call(self::NAME, 'GET');
         if ($data !== false) {
-            $all_customer = json_decode($data)->data;
+            $all_product = json_decode($data)->data;
         }
-        $paginate = $this->paginateData($all_customer);
-        $customer_paginate = $paginate['final'];
-        return view('admin.customer.index', compact('customer_paginate', 'paginate'));
+
+        return view('admin.product.index', compact('all_product'));
     }
 
     /**
@@ -39,7 +38,7 @@ class CustomerController extends AppController
      */
     public function create()
     {
-        return view('admin.customer.create');
+        //
     }
 
     /**
@@ -50,13 +49,7 @@ class CustomerController extends AppController
      */
     public function store(Request $request)
     {
-        $param = $request->all();
-
-        $data = $this->call(self::NAME, 'POST', $param);
-        if ($data !== false) {
-            return redirect()->route('admin.customer.create')->with('message', "Add customer successfully!");
-        }
-        return redirect()->route('admin.customer.create')->with('error', "Add customer failed!");
+        //
     }
 
     /**

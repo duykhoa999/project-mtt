@@ -25,7 +25,7 @@ class ImportController extends AppController
 
         $data = $this->call(self::NAME, 'GET');
         if ($data !== false) {
-            $all_imports = json_decode($data);
+            $all_imports = json_decode($data)->data;
         }
 
         return view('admin.import.index', compact('all_imports'));

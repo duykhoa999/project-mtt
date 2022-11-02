@@ -4,6 +4,7 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
+
 h4,
 h5,
 h6,
@@ -63,7 +64,9 @@ body a:hover {
     text-decoration: none;
 }
 
+
 /*sidebar navigation*/
+
 #sidebar {
     width: 240px;
     height: 100%;
@@ -103,7 +106,9 @@ a.active.styling-edit {
     padding-left: 0;
 }
 
+
 /*LEFT NAVIGATION ICON*/
+
 .dcjq-icon {
     height: 17px;
     width: 17px;
@@ -146,7 +151,9 @@ a.active.styling-edit {
     border: none;
 }
 
+
 /*---*/
+
 .nav-collapse.collapse {
     display: inline;
 }
@@ -159,7 +166,6 @@ ul.sidebar-menu li ul.sub {
 
 ul.sidebar-menu {
     padding-top: 80px;
-
 }
 
 #sidebar>ul>li>ul.sub {
@@ -269,7 +275,9 @@ ul.sidebar-menu li a.active i {
     font-size: 11px;
 }
 
+
 /*main content*/
+
 #main-content {
     margin-left: 240px;
     -webkit-transition: all .3s ease-in-out;
@@ -349,7 +357,9 @@ a.logo span {
     color: #FF6C60;
 }
 
+
 /*notification*/
+
 #top_menu .nav>li,
 ul.top-menu>li {
     float: left;
@@ -697,13 +707,17 @@ ul.top-menu>li>a:focus {
     border-top-color: #000;
 }
 
+
 /*form*/
+
 .position-center {
     width: 62%;
     margin: 0 auto;
 }
 
+
 /*----*/
+
 .notify-arrow {
     background: url("../images/top-arrow.png") no-repeat;
     width: 18px;
@@ -719,7 +733,9 @@ ul.top-menu>li>a:focus {
     opacity: 1;
 }
 
+
 /*search*/
+
 .search {
     width: 20px;
     -webkit-transition: all .3s ease;
@@ -754,7 +770,9 @@ ul.top-menu>li>a:focus {
     width: 100% !important;
 }
 
+
 /*--sidebar toggle---*/
+
 .sidebar-toggle-box {
     float: left;
     margin-top: 23px;
@@ -833,7 +851,9 @@ ul.top-menu>li>a:focus {
     color: #bfbfc1;
 }
 
+
 /*--market--*/
+
 .market-update-block {
     padding: 2em 2em;
     background: #999;
@@ -960,7 +980,9 @@ ul.top-menu>li>a:focus {
     margin: 1.5em 0;
 }
 
+
 /*--market--*/
+
 .panel-heading {
     position: relative;
     height: 57px;
@@ -1093,7 +1115,9 @@ span.panel-title {
     padding: 16.8px !important;
 }
 
+
 /*-- graphs --*/
+
 .area-grids {
     border: 10px solid #d8d8d8;
     background: #FFF;
@@ -1163,8 +1187,12 @@ div#graph9 {
     text-transform: uppercase;
 }
 
+
 /*-- graphs --*/
+
+
 /*--statistics--*/
+
 .stats-info ul li {
     margin-bottom: 1em;
     border-bottom: 1px solid #e1ab91;
@@ -1238,8 +1266,12 @@ div#graph9 {
     padding: 11px !important;
 }
 
+
 /*--//statistics--*/
+
+
 /*--Progress bars--*/
+
 .progress {
     height: 10px;
     margin: 7px 0;
@@ -1328,7 +1360,6 @@ div#graph9 {
     from {
         background-position: 40px 0;
     }
-
     to {
         background-position: 0 0;
     }
@@ -1338,7 +1369,6 @@ div#graph9 {
     from {
         background-position: 40px 0;
     }
-
     to {
         background-position: 0 0;
     }
@@ -1348,7 +1378,6 @@ div#graph9 {
     from {
         background-position: 40px 0;
     }
-
     to {
         background-position: 0 0;
     }
@@ -1358,7 +1387,6 @@ div#graph9 {
     from {
         background-position: 0 0;
     }
-
     to {
         background-position: 40px 0;
     }
@@ -1368,13 +1396,14 @@ div#graph9 {
     from {
         background-position: 40px 0;
     }
-
     to {
         background-position: 0 0;
     }
 }
 
+
 /*--Progress bars--*/
+
 .stats-info-agileits {
     background: #eef9f0;
     padding: 2em;
@@ -1425,7 +1454,9 @@ h4.title {
     outline: none;
 }
 
+
 /*button*/
+
 .btn-row {
     margin-bottom: 10px;
 }
@@ -1438,7 +1469,9 @@ h4.title {
     box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
 }
 
+
 /*-- icons --*/
+
 .codes a {
     color: #999;
 }
@@ -1590,7 +1623,6 @@ h3.agileits-icons-title {
     h3.agileits-icons-title {
         font-size: 28px;
     }
-
     h3.icon-subheading {
         font-size: 22px;
     }
@@ -1600,16 +1632,13 @@ h3.agileits-icons-title {
     h3.agileits-icons-title {
         font-size: 28px;
     }
-
     h3.icon-subheading {
         font-size: 25px;
     }
-
     .row {
         margin-right: 0;
         margin-left: 0;
     }
-
     .icon-box {
         margin: 0;
         width: 100%;
@@ -1633,11 +1662,9 @@ h3.agileits-icons-title {
     h3.agileits-icons-title {
         font-size: 23px;
     }
-
     h3.icon-subheading {
         font-size: 18px;
     }
-
     .bs-glyphicons li {
         width: 31.33%;
     }
@@ -1650,12 +1677,16 @@ h3.agileits-icons-title {
     }
 }
 
+
 /*-- //icons --*/
+
 .w3_wthree_agileits_icons.main-grid-border {
     padding: 5em 0;
 }
 
+
 /*--Typography--*/
+
 .well {
     font-weight: 300;
     font-size: 14px;
@@ -1710,7 +1741,6 @@ h3.m_1 {
 
 .grid_4 {
     background: none;
-
 }
 
 .label {
@@ -1880,14 +1910,12 @@ h2.typoh2 {
     .grid_5 {
         padding: 0 0 1em;
     }
-
     .grid_3 {
         margin-bottom: 0em;
     }
 }
 
 @media (max-width:640px) {
-
     h1,
     .h1,
     h2,
@@ -1897,7 +1925,6 @@ h2.typoh2 {
         margin-top: 0px;
         margin-bottom: 0px;
     }
-
     .grid_5 h3,
     .grid_5 h2,
     .grid_5 h1,
@@ -1907,47 +1934,38 @@ h2.typoh2 {
     h3.bars {
         margin-bottom: .5em;
     }
-
     .progress {
         height: 10px;
         margin-bottom: 10px;
     }
-
     ol.breadcrumb li,
     .grid_3 p,
     ul.list-group li,
     li.list-group-item1 {
         font-size: 14px;
     }
-
     .breadcrumb {
         margin-bottom: 25px;
     }
-
     .well {
         font-size: 14px;
         margin-bottom: 10px;
     }
-
     h2.typoh2 {
         font-size: 1.5em;
     }
-
     .label {
         font-size: 60%;
     }
-
     .in-gp-tl {
         padding: 0 1em;
     }
-
     .in-gp-tb {
         padding-right: 1em;
     }
 }
 
 @media (max-width:480px) {
-
     .grid_5 h3,
     .grid_5 h2,
     .grid_5 h1,
@@ -1957,32 +1975,25 @@ h2.typoh2 {
     h3.bars {
         font-size: 1.2em;
     }
-
     .table h1 {
         font-size: 26px;
     }
-
     .table h2 {
         font-size: 23px;
     }
-
     .table h3 {
         font-size: 20px;
     }
-
     .label {
         font-size: 53%;
     }
-
     .alert,
     p {
         font-size: 14px;
     }
-
     .pagination {
         margin: 20px 0 0px;
     }
-
     .grid_3.grid_4.w3layouts {
         margin-top: 25px;
     }
@@ -1992,11 +2003,9 @@ h2.typoh2 {
     .grid_4 {
         margin-top: 18px;
     }
-
     h3.title {
         font-size: 1.6em;
     }
-
     .alert,
     p,
     ol.breadcrumb li,
@@ -2007,31 +2016,28 @@ h2.typoh2 {
     a.list-group-item {
         font-size: 13px;
     }
-
     .alert {
         padding: 10px;
         margin-bottom: 10px;
     }
-
     ul.pagination li a {
         font-size: 14px;
         padding: 5px 10px;
     }
-
     .list-group {
         margin-bottom: 10px;
     }
-
     .well {
         padding: 10px;
     }
-
     .nav>li>a {
         font-size: 14px;
     }
 }
 
+
 /*-- //typography --*/
+
 .typo {
     padding: 5em 0;
 }
@@ -2329,7 +2335,9 @@ select.input-sm {
     background: #FCB322;
 }
 
+
 /* mail inbox */
+
 .mail-nav {
     margin: 15px -15px 0 -15px;
 }
@@ -2886,7 +2894,9 @@ ul.inbox-pagination li {
     -ms-transition: 0.5s all;
 }
 
+
 /*-- gallery --*/
+
 .w3l-gallery-heading h3 {
     text-align: right !important;
     color: #FF5722 !important;
@@ -2945,14 +2955,18 @@ ul.inbox-pagination li {
     font-size: .9em;
 }
 
+
 /*-- //gallery --*/
+
 .gallery {
     padding: 2em;
     background: rgb(238, 249, 240);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
+
 /*-- gallery --*/
+
 .w3layouts-main h2 {
     color: #8b5c7e;
     font-size: 29px;
@@ -2969,8 +2983,12 @@ ul.inbox-pagination li {
     padding: 42px 35px;
 }
 
+
 /*--//header--*/
+
+
 /*--login--*/
+
 input.ggg {
     width: 100%;
     padding: 15px 0px 15px 15px;
@@ -3061,7 +3079,9 @@ input.ggg {
     text-align: center;
 }
 
+
 /*--//login--*/
+
 h4 input[type="checkbox"] {
     margin-right: 10px;
 }
@@ -3073,7 +3093,9 @@ h4 input[type="checkbox"] {
     font-size: 14px;
 }
 
+
 /*--placeholder-color--*/
+
 ::-webkit-input-placeholder {
     color: #fff !important;
 }
@@ -3092,7 +3114,9 @@ h4 input[type="checkbox"] {
     color: #fff !important;
 }
 
+
 /*--//placeholder-color--*/
+
 .alert {
     margin-bottom: 23px !important;
 }
@@ -3172,12 +3196,13 @@ div#graph11 {
     width: 100%;
 }
 
+
 /*-- responsive design --*/
+
 @media (max-width: 1440px) {
     .w3layouts-main {
         width: 33%;
     }
-
     .captn {
         padding: 1em;
         width: 301px;
@@ -3189,7 +3214,6 @@ div#graph11 {
     .w3layouts-main {
         width: 35%;
     }
-
     .captn {
         width: 280px;
         height: 170px;
@@ -3200,21 +3224,17 @@ div#graph11 {
     .w3layouts-main {
         width: 38%;
     }
-
     .captn {
         width: 256px;
         height: 150px;
     }
-
     .market-update-block {
         padding: 1em 1em;
     }
-
     .alert {
         margin-bottom: 13px !important;
         padding: 12.8px !important;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3232,52 +3252,41 @@ div#graph11 {
     .w3layouts-main {
         width: 45%;
     }
-
     .agile-info {
         padding: 9.1em 2em;
     }
-
     .captn {
         width: 198px;
         height: 118px;
     }
-
     .captn h4 {
         margin: 1em 0 0 0;
     }
-
     .market-update-gd {
         float: left;
         width: 50%;
         margin: 1em 0;
     }
-
     .market-updates {
         margin: 0em 0;
     }
-
     .agile-calendar {
         width: 100%;
         margin-bottom: 1.5em;
     }
-
     .w3agile-notifications {
         width: 100%;
     }
-
     .agile-last-left {
         width: 100%;
     }
-
     .agile-last-left.agile-last-middle {
         width: 100%;
         margin: 1.5em 0;
     }
-
     .agile-last-left.agile-last-right {
         width: 100%;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3289,16 +3298,13 @@ div#graph11 {
     div#graph11 {
         width: 650px !important;
     }
-
     .stats-info.widget {
         width: 100%;
         margin-bottom: 1.5em;
     }
-
     .stats-info.stats-last.widget-shadow {
         width: 100%;
     }
-
     .w-sm {
         width: 138px;
     }
@@ -3308,7 +3314,6 @@ div#graph11 {
     .w3layouts-main {
         width: 47%;
     }
-
     .captn {
         width: 180px;
         height: 110px;
@@ -3320,16 +3325,13 @@ div#graph11 {
         width: 171px;
         height: 102px;
     }
-
     .market-update-left {
         float: left;
         margin-left: 20px;
     }
-
     .market-update-right {
         float: left;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3341,7 +3343,6 @@ div#graph11 {
     div#graph11 {
         width: 600px !important;
     }
-
     .w-sm {
         width: 127px;
     }
@@ -3351,32 +3352,26 @@ div#graph11 {
     .w3layouts-main {
         width: 62%;
     }
-
     .gallery-grids-left {
         width: 100%;
     }
-
     .captn {
         width: 350px;
         height: 200px;
     }
-
     .captn h4 {
         margin: 3em 0 0 0;
     }
-
     .market-update-right {
         width: 100%;
         padding: 0;
         text-align: center;
     }
-
     .market-update-left {
         margin-left: 0;
         text-align: center;
         width: 100%;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3388,7 +3383,6 @@ div#graph11 {
     div#graph11 {
         width: 430px !important;
     }
-
     .table td,
     .table>tbody>tr>td,
     .table>tbody>tr>th,
@@ -3398,11 +3392,9 @@ div#graph11 {
     .table>thead>tr>th {
         padding: 7px !important;
     }
-
     .com-w3ls {
         width: 100%;
     }
-
     .mail-w3agile {
         width: 100%;
     }
@@ -3412,7 +3404,6 @@ div#graph11 {
     .agile-info {
         padding: 17em 2em;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3424,7 +3415,6 @@ div#graph11 {
     div#graph11 {
         width: 400px !important;
     }
-
     .table td,
     .table>tbody>tr>td,
     .table>tbody>tr>th,
@@ -3434,36 +3424,28 @@ div#graph11 {
     .table>thead>tr>th {
         padding: 6px !important;
     }
-
     #drop {
         padding: 100px 30px;
     }
-
     .table-agile-info {
         padding: 2em 2em 10.7em;
     }
-
     .position-center {
         width: 100%;
         margin: 0 auto;
     }
-
     #upload {
         margin: 0px auto 230px;
     }
-
     .w3ls-graph {
         padding: 0;
     }
-
     .w3layouts-main {
         margin: 14.3em auto;
     }
-
     .search:focus {
         width: 170px;
     }
-
     .todo-search:focus {
         width: 95% !important;
     }
@@ -3473,24 +3455,19 @@ div#graph11 {
     .w3layouts-main {
         width: 65%;
     }
-
     .agile-info {
         padding: 2em 2em;
     }
-
     .captn {
         width: 534px;
         height: 300px;
     }
-
     .captn h4 {
         margin: 6em 0 0 0;
     }
-
     .w3ls-graph {
         padding: 0;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3502,15 +3479,12 @@ div#graph11 {
     div#graph11 {
         width: 620px !important;
     }
-
     .table-agile-info {
         padding: 2em;
     }
-
     #upload {
         margin: 0px auto 50px;
     }
-
     .w3layouts-main {
         margin: 5em auto;
     }
@@ -3520,26 +3494,21 @@ div#graph11 {
     .w3layouts-main {
         width: 72%;
     }
-
     .agile-info p {
         font-size: 0.9em;
         margin-bottom: 2em;
         margin-top: 2em;
     }
-
     .agile-info a {
         width: 26%;
     }
-
     .captn {
         width: 474px;
         height: 267px;
     }
-
     .captn h4 {
         margin: 5em 0 0 0;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3557,16 +3526,13 @@ div#graph11 {
     .w3layouts-main {
         width: 75%;
     }
-
     .agile-info {
         padding: 3.7em 2em;
     }
-
     .captn {
         width: 452px;
         height: 250px;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3584,12 +3550,10 @@ div#graph11 {
     .w3layouts-main {
         width: 80%;
     }
-
     .captn {
         width: 414px;
         height: 242px;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3607,16 +3571,13 @@ div#graph11 {
     .w3layouts-main {
         width: 84%;
     }
-
     .captn {
         width: 386px;
         height: 225px;
     }
-
     .captn h4 {
         margin: 4em 0 0 0;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3636,32 +3597,25 @@ div#graph11 {
         margin: 3em auto;
         padding: 30px 20px;
     }
-
     .agile-info {
         padding: 7.1em 2em;
     }
-
     .agile-info a {
         width: 33%;
     }
-
     .captn {
         width: 308px;
         height: 180px;
     }
-
     .captn h4 {
         margin: 3em 0 0 0;
     }
-
     .w3-agile-map-left iframe {
         min-height: 300px;
     }
-
     .w3-agile-map-right iframe {
         min-height: 300px;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3673,11 +3627,9 @@ div#graph11 {
     div#graph11 {
         width: 332px !important;
     }
-
     .table-agile-info {
         padding: 1em;
     }
-
     .table td,
     .table>tbody>tr>td,
     .table>tbody>tr>th,
@@ -3687,7 +3639,6 @@ div#graph11 {
     .table>thead>tr>th {
         padding: 5px !important;
     }
-
     .form-w3layouts {
         padding: 1em;
     }
@@ -3697,78 +3648,62 @@ div#graph11 {
     .w3layouts-main h2 {
         font-size: 24px;
     }
-
     .w3layouts-main h6 {
         font-size: 14px;
         width: 45%;
     }
-
     .w3layouts-main span {
         font-size: 14px;
         width: 37%;
         margin-top: 2px;
     }
-
     .agile-info a {
         width: 40%;
     }
-
     .agile-info h2 {
         font-size: 9em;
     }
-
     .agile-info {
         padding: 5em 2em 11.3em;
     }
-
     .w3layouts-main {
         margin: 0em auto 11.4em;
         padding: 30px 20px;
     }
-
     .captn {
         width: 250px;
         height: 146px;
     }
-
     .captn h4 {
         margin: 2em 0 0 0;
     }
-
     .w3-agile-map-left,
     .w3-agile-map-right {
         padding: 0;
     }
-
     .market-update-gd {
         float: left;
         width: 100%;
     }
-
     .market-update-left {
         margin-left: 0;
         text-align: left;
         width: 63%;
     }
-
     .market-update-right {
         width: 26%;
         padding: 0;
         text-align: left;
     }
-
     .agileinfo-grap {
         padding: 1em;
     }
-
     .calendar-widget {
         padding: 1em;
     }
-
     .notifications {
         padding: 1em;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3780,13 +3715,11 @@ div#graph11 {
     div#graph11 {
         width: 300px !important;
     }
-
     .agile-Updating-grids,
     .agile-bottom-grid,
     .agile-last-grid {
         padding: 1em;
     }
-
     .table td,
     .table>tbody>tr>td,
     .table>tbody>tr>th,
@@ -3796,67 +3729,52 @@ div#graph11 {
     .table>thead>tr>th {
         padding: 6px !important;
     }
-
     .stats-info-agileits {
         padding: 1em;
     }
-
     .stats-last-agile {
         padding: 1em;
     }
-
     .w3layouts-glyphicon {
         padding: 1em;
     }
-
     .typo-agile {
         padding: 1em;
     }
-
     .agile-grid {
         padding: 1em;
     }
-
     .position-center {
         width: 92%;
     }
-
     #drop {
         padding: 50px 30px;
         margin-bottom: 0;
     }
-
     .com-w3ls {
         padding: 0;
     }
-
     .mail-w3agile {
         padding: 0;
     }
-
     .wht-bg h4 {
         font-size: 16px;
     }
-
     .chart_agile_top {
         padding: 1em;
         margin: 0 0 1em;
     }
-
     .chart_agile_left,
     .chart_agile_right {
         padding: 0;
     }
-
     .floatcharts_w3layouts_top {
         padding: 1em;
     }
-
     .floatcharts_w3layouts_left {
         margin-bottom: 1em;
         padding: 0;
     }
-
     .vec-wthree {
         padding: 0;
     }
@@ -3866,20 +3784,16 @@ div#graph11 {
     .agile-info {
         padding: 5.9em 2em;
     }
-
     .w3layouts-main {
         margin: 0em auto 5.4em;
     }
-
     .gallery {
         padding: 1em;
     }
-
     .w3ls_head {
         margin-bottom: 0.5em;
         ;
     }
-
     .table td,
     .table>tbody>tr>td,
     .table>tbody>tr>th,
@@ -3889,7 +3803,6 @@ div#graph11 {
     .table>thead>tr>th {
         padding: 3px !important;
     }
-
     .wht-bg h4 {
         font-size: 14px;
     }
@@ -3899,12 +3812,10 @@ div#graph11 {
     .agile-info {
         padding: 3em 2em 8.95em;
     }
-
     .captn {
         width: 244px;
         height: 146px;
     }
-
     .table td,
     .table>tbody>tr>td,
     .table>tbody>tr>th,
@@ -3915,7 +3826,6 @@ div#graph11 {
         padding: 4px !important;
         font-size: 0.75em;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -3927,7 +3837,6 @@ div#graph11 {
     div#graph11 {
         width: 290px !important;
     }
-
     .wht-bg h4 {
         font-size: 13px;
     }
@@ -3938,89 +3847,69 @@ div#graph11 {
         width: 95%;
         margin: 0em auto 2em;
     }
-
     .w3layouts-main h6 {
         font-size: 13px;
         width: 49%;
     }
-
     .w3layouts-main span {
         width: 45%;
     }
-
     .w3layouts-main input[type="submit"] {
         padding: 10px 26px;
         font-size: 16px;
         margin: 45px auto 18px;
     }
-
     .agile-info h2 {
         font-size: 7em;
     }
-
     .agile-info a {
         width: 55%;
         font-size: 0.9em;
     }
-
     .agile-info {
         padding: 3em 2em 8.95em;
     }
-
     .captn {
         width: 196px;
         height: 114px;
     }
-
     .captn h4 {
         margin: 1em 0 0 0;
     }
-
     .w3-agile-google_map {
         padding: 1em;
     }
-
     .w3-agile-map-left iframe {
         min-height: 250px;
     }
-
     .w3-agile-map-right iframe {
         min-height: 250px;
     }
-
     .market-update-gd {
         padding: 0;
     }
-
     .market-update-gd {
         margin: 0.8em 0;
     }
-
     .market-update-right {
         width: 30%;
     }
-
     .panel-body {
         padding: 6px ! important;
     }
-
     .agileinfo-grap {
         margin-top: 0.8em;
     }
-
     .agile-calendar {
         margin-bottom: 1em;
         padding: 0;
     }
-
     .w3agile-notifications {
         padding: 0;
     }
-
     .agile-last-left {
         padding: 0;
     }
-
     div#graph1,
     div#graph4,
     div#graph5,
@@ -4032,16 +3921,13 @@ div#graph11 {
     div#graph11 {
         width: 250px !important;
     }
-
     .stats-info.widget {
         margin-bottom: 1em;
         padding: 0;
     }
-
     .stats-info.stats-last.widget-shadow {
         padding: 0;
     }
-
     .table td,
     .table>tbody>tr>td,
     .table>tbody>tr>th,
@@ -4051,11 +3937,9 @@ div#graph11 {
     .table>thead>tr>th {
         padding: 0px !important;
     }
-
     .agile-last-left.agile-last-middle {
         margin: 1em 0;
     }
-
     .table>thead>tr>th,
     .table>tbody>tr>th,
     .table>tfoot>tr>th,
@@ -4064,57 +3948,44 @@ div#graph11 {
     .table>tfoot>tr>td {
         font-size: 0.75em;
     }
-
     #drop {
         padding: 50px 16px;
     }
-
     .mail-nav {
         margin: 0;
     }
-
     .w3-res-tb {
         padding: 2em 0em 0;
     }
-
     .col-lg-12 {
         padding: 0;
     }
-
     .table-inbox {
         margin: 14px;
     }
-
     .table {
         width: 90%;
     }
-
     .wht-bg h4 {
         font-size: 16px;
         float: none;
         text-align: center;
     }
-
     .input-append {
         margin-top: 1em;
     }
-
     .search:focus {
         width: 150px;
     }
-
     .todo-search:focus {
         width: 90% !important;
     }
-
     .wthree-font-awesome {
         padding: 1em;
     }
-
     .floatcharts_w3layouts_bottom {
         padding: 0px;
     }
-
     .chart_agile_bottom {
         padding: 0;
     }
@@ -4126,4 +3997,30 @@ span.text-alert {
     width: 100%;
     text-align: center;
     font-weight: bold;
+}
+
+.pagination_custom {
+    display: inline-block;
+}
+
+.pagination_custom a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination_custom a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.pagination_custom a:hover:not(.active) {
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
+.disable {
+    pointer-events: none;
 }

@@ -14,19 +14,23 @@
                         <i class="fa fa-book"></i>
                         <span>Category</span>
                     </a>
-
                 </li>
                 <li class="sub-menu">
                     <a href="{{route('admin.customer.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.customer')) ? 'active' : ''}}">
                         <i class="fa fa-book"></i>
                         <span>Customer</span>
                     </a>
-
                 </li>
                 <li class="sub-menu">
                     <a href="{{route('admin.import.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.import')) ? 'active' : ''}}">
                         <i class="fa fa-money"></i>
                         <span>Import</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                    <a href="{{route('admin.product.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.product')) ? 'active' : ''}}">
+                        <i class="fa fa-book"></i>
+                        <span>Product</span>
                     </a>
 
                 </li>
@@ -43,13 +47,7 @@
                     </a>
 
                 </li>
-                <li class="sub-menu">
-                    <a href="{{route('admin.product.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.product')) ? 'active' : ''}}">
-                        <i class="fa fa-book"></i>
-                        <span>Sản phẩm</span>
-                    </a>
-
-                </li>
+                
                 <li class="sub-menu">
                     <a href="{{route('admin.coupon.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.coupon')) ? 'active' : ''}}">
                         <i class="fa fa-money"></i>

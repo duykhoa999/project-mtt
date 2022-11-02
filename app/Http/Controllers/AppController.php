@@ -50,16 +50,17 @@ class AppController extends Controller
     public function paginateData($data = [])
     {
         $page = !isset($_GET['page']) ? 1 : $_GET['page'];
-        $limit = 1; // five rows per page
+        $limit = config('define.paginate'); // five rows per page
         $offset = ($page - 1) * $limit; // offset
         $total_items = count($data); // total items
         $total_pages = ceil($total_items / $limit);
         $final = array_splice($data, $offset, $limit); // splice them according to offset and limit
-        
+
         return [
             'total_item' => $total_items ?? 0,
             'total_pages' => $total_pages ?? 0,
-            'final' => $final
+            'final' => $final,
+            'page' => $page
         ];
     }
 }

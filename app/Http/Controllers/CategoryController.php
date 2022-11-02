@@ -25,10 +25,14 @@ class CategoryController extends AppController
 
         $data = $this->call(self::NAME, 'GET');
         if ($data !== false) {
-            $all_category = json_decode($data);
+            $all_category = json_decode($data)->data;
         }
 
-        return view('admin.category.index', compact('all_category'));
+        $paginate = $this->paginateData($all_category);
+        $category_paginate = $paginate['final'];
+        $url = 'categories';
+
+        return view('admin.category.index', compact('all_category', 'category_paginate', 'paginate', 'url'));
     }
 
     /**
