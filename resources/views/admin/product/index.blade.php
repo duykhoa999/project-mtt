@@ -51,12 +51,12 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($all_product as $key => $pro)
+                        @foreach ($product_paginate as $key => $pro)
                             <tr>
                                 <td><label class="i-checks m-b-none">{{ ($key + 1) }}</td>
 
                                 <td>{{ $pro->name }}</td>
-                                <td><img src="/uploads/product/{{ $pro->image }}" height="100px" width="100px"></td>
+                                <td><img src="data:image/png;base64, {{$pro->image}}" height="100px" width="100px"></td>
                                 <td>{{ $pro->amount }}</td>
                                 <td>{{ $pro->slug }}</td>
                                 <td>{{ number_format($pro->price, 0, ',', ',') }}đ</td>
@@ -93,6 +93,7 @@
                     </div>
                     <div class="col-sm-7 text-right text-center-xs">
                         <ul class="pagination pagination-sm m-t-none m-b-none">
+                            @include('admin.layouts.pagination')
                             {{-- {!! $all_product->links() !!} --}}
                         </ul>
                     </div>

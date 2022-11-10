@@ -28,7 +28,11 @@ class ProductController extends AppController
             $all_product = json_decode($data)->data;
         }
 
-        return view('admin.product.index', compact('all_product'));
+        $paginate = $this->paginateData($all_product);
+        $product_paginate = $paginate['final'];
+        $url = 'products';
+
+        return view('admin.product.index', compact('product_paginate', 'paginate', 'url'));
     }
 
     /**
@@ -38,7 +42,27 @@ class ProductController extends AppController
      */
     public function create()
     {
-        //
+        $list_category = [];
+        $list_vendor = [
+            0 => (object)[
+                'id' => 1,
+                'name' => 'Bùi Duy Khoa'
+            ],
+            1 => (object)[
+                'id' => 2,
+                'name' => 'Duy Khoa'
+            ]
+        ];
+        $data_category = $this->call('/category/', 'GET');
+        if ($data_category !== false) {
+            $list_category = json_decode($data_category)->data;
+        }
+        $data_vendor = $this->call('/vendor/', 'GET');
+        if ($data_vendor !== false) {
+            $list_vendor = json_decode($data_vendor)->data;
+        }
+
+        return view('admin.product.create', compact('list_category', 'list_vendor'));
     }
 
     /**
@@ -49,7 +73,14 @@ class ProductController extends AppController
      */
     public function store(Request $request)
     {
-        //
+        $param = $request->all();
+        $param['image'] = base64_encode(file_get_contents($request->file('image')));
+
+        $data = $this->call(self::NAME, 'POST', $param);
+        if ($data !== false) {
+            return redirect()->route('admin.product.create')->with('message', "Add product successfully!");
+        }
+        return redirect()->route('admin.product.create')->with('error', "Add product failed!");
     }
 
     /**
@@ -94,6 +125,11 @@ class ProductController extends AppController
      */
     public function destroy($id)
     {
-        //
+        $data = $this->call(self::NAME . $id, 'DELETE');
+
+        if ($data !== false) {
+            return redirect()->route('admin.product.index')->with('message', "Delete product successfully!");
+        }
+        return redirect()->route('admin.product.index')->with('error', "Delete product failed!");
     }
 }

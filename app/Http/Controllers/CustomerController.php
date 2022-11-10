@@ -29,7 +29,9 @@ class CustomerController extends AppController
         }
         $paginate = $this->paginateData($all_customer);
         $customer_paginate = $paginate['final'];
-        return view('admin.customer.index', compact('customer_paginate', 'paginate'));
+        $url = 'customers';
+
+        return view('admin.customer.index', compact('customer_paginate', 'paginate', 'url'));
     }
 
     /**
