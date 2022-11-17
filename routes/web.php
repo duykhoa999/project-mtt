@@ -1,11 +1,14 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ImportController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\ShopController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Admin
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
     Route::get('/', [AdminController::class, 'index'])->name('index');
     Route::get('/filter-by-date', [AdminController::class, 'filter_by_date'])->name('filter-by-date');
@@ -58,4 +62,15 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], function() {
     Route::get('/products/{id}', [ProductController::class, 'show'])->name('product.show');
     Route::put('/products/{id}', [ProductController::class, 'update'])->name('product.update');
     Route::delete('/products/{id}', [ProductController::class, 'destroy'])->name('product.delete');
+});
+
+// User
+Route::get('/', [HomeController::class, 'index'])->name('index');
+Route::group(['prefix' => 'shop', 'as' => 'shop.'], function() {
+    Route::get('/', [ShopController::class, 'index'])->name('index');
+    Route::get('/detail', [ShopController::class, 'detail'])->name('detail');
+});
+
+Route::group(['prefix' => 'cart', 'as' => 'cart.'], function() {
+    Route::get('/', [CartController::class, 'index'])->name('index');
 });

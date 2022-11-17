@@ -53,8 +53,8 @@ class AppController extends Controller
     public function paginateData($data = [])
     {
         $page = !isset($_GET['page']) ? 1 : $_GET['page'];
-        // $limit = config('define.paginate'); // load from config/define.php
-        $limit = 1; // load from config/define.php
+        $limit = config('define.paginate'); // load from config/define.php
+        // $limit = 1; // load from config/define.php
         $offset = ($page - 1) * $limit; // offset
         $total_items = count($data); // total items
         $total_pages = ceil($total_items / $limit);
