@@ -50,6 +50,7 @@
                         <tr>
 
                             <th>No. </th>
+                            <th>Code </th>
                             <th>Staff's Name</th>
                             <th>Date Create</th>
                             <th>Order</th>
@@ -58,28 +59,33 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($all_imports as $key => $item)
+                        @foreach ($import_paginate as $key => $item)
                             <tr>
+                                <td>{{$key + 1}}</td>
                                 <td>
                                     <a href="{{ route('admin.import.show', ['id' => $item->id]) }}"
                                         class="active styling-edit" ui-toggle-class="">
-                                        {{ $key }}</a>
+                                        {{ $item->code }}</a>   
                                 </td>
-                                {{-- <td>{{ $item->staff->ho_ten }}</td> --}}
-                                <td></td>
+                                <td>{{ $item->user->first_name . ' ' . $item->user->last_name }}</td>
                                 <td>{{ date('d-M-Y', strtotime($item->date)) }}</td>
-                                <td>{{$item->vendor_order_id}}</td>
+                                <td>{{$item->vendorOrder->code}}</td>
                                 <td>
                                     <a href="{{ route('admin.import.show', ['id' => $item->id]) }}"
                                         class="active styling-edit" ui-toggle-class="">
                                         <i class="fa fa-eye text-success text-active"></i></a>
-
-                                    <a onclick="return confirm('Are you sure?')"
-                                        href="{{ URL::to('/delete-order/' . $item->id) }}" class="active styling-edit"
-                                        ui-toggle-class="">
-                                        <i class="fa fa-times text-danger text"></i>
-                                    </a>
-
+                                    <a class="active styling-edit"
+                                        href="{{ route('admin.import.delete', ['id' => $item->id]) }}"
+                                        onclick="event.preventDefault();
+                                        window.confirm('Are you sure?') ?
+                                        document.getElementById('import-delete-{{ $item->id }}').submit():
+                                        0;"><i
+                                            class="fa fa-times text-danger text"></i></a>
+                                    <form action="{{ route('admin.import.delete', ['id' => $item->id]) }}"
+                                        method="post" id="import-delete-{{ $item->id }}">
+                                        {{ csrf_field() }}
+                                        {{ method_field('delete') }}
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
@@ -92,7 +98,7 @@
             <div class="row">
 
                 <div class="col-sm-5 text-center">
-                    <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small>
+                    {{-- <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small> --}}
                 </div>
                 <div class="col-sm-7 text-right text-center-xs">
                     <ul class="pagination pagination-sm m-t-none m-b-none">

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class HomeController extends AppController
 {
@@ -16,6 +17,13 @@ class HomeController extends AppController
 
     public function index()
     {
-        return view('user.index');
+      $products_new = [];
+
+      $data_product = $this->call('/product/', 'GET', ['keyword' => '']);
+      if ($data_product !== false) {
+          $products_new = json_decode($data_product)->data;
+      }
+
+      return view('user.index', compact('products_new'));
     }
 }

@@ -1,361 +1,299 @@
 @extends('user.layouts.master')
-@section('title', 'Watch shop | eCommers')
 @section('content')
-    <!--? slider Area Start -->
-    <div class="slider-area ">
-        <div class="slider-active">
-            <!-- Single Slider -->
-            <div class="single-slider slider-height d-flex align-items-center slide-bg">
-                <div class="container">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
-                            <div class="hero__caption">
-                                <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Select Your
-                                    New Perfect Style</h1>
-                                <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Ut enim ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat is aute irure.</p>
-                                <!-- Hero-btn -->
-                                <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                    <a href="industries.html" class="btn hero-btn">Shop Now</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
-                            <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                <img src="/user/img/hero/watch.png" alt="" class=" heartbeat">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- *********************** Start Banner ***************** -->
+    <div class="banner" style="background: white;">
+        <div class="house owl-carousel owl-theme container" id="banner-slider">
+            <div class="item">
+                <img src="{{ URL::to('frontend/img/banner1.jpg') }}" alt="">
+                <!-- <div class="item-content">
+                    <span>Giảm giá mùa hè!</span>
+                    <h2 style="color: white;">Máy Chạy Bộ Điện Đa Năng
+                        <br style="color: white;"> Phong Cách Đơn Giản
+                    </h2>
+                    <p style="color: white;">Giảm Giá Lớn</p>
+                    <h3 style="color: white;">Sale 30% Off</h3>
+                    <button class="shopnow"> <a style="color: white; text-decoration: none;" href="{{ URL::to('/chi-tiet-san-pham/31') }}">Mua Ngay</a></button>
+                </div> -->
             </div>
-            <!-- Single Slider -->
-            <div class="single-slider slider-height d-flex align-items-center slide-bg">
-                <div class="container">
-                    <div class="row justify-content-between align-items-center">
-                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8">
-                            <div class="hero__caption">
-                                <h1 data-animation="fadeInLeft" data-delay=".4s" data-duration="2000ms">Select Your
-                                    New Perfect Style</h1>
-                                <p data-animation="fadeInLeft" data-delay=".7s" data-duration="2000ms">Ut enim ad
-                                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                    commodo consequat is aute irure.</p>
-                                <!-- Hero-btn -->
-                                <div class="hero__btn" data-animation="fadeInLeft" data-delay=".8s" data-duration="2000ms">
-                                    <a href="industries.html" class="btn hero-btn">Shop Now</a>
-                                </div>
+            <div class="item">
+                <img src="{{ URL::to('frontend/img/banner_2.jpg') }}" alt="">
+                <!-- <div class="item-content">
+                    <span style="color: white;">Đừng Bỏ Lỡ!</span>
+                    <h2 style="color: white;">Ghế Tập Bụng Đa Năng
+                    </h2>
+                    <p style="color: white;">Thiết Bị Tập Gym</p>
+                    <h3 style="color: white;">Giá chỉ 1,450,000</h3>
+                    <button class="shopnow"> <a style="color: white; text-decoration: none;" href="{{ URL::to('/chi-tiet-san-pham/42') }}">Mua Ngay</a></button>
+                </div> -->
+            </div>
+            <div class="item">
+                <img src="{{ URL::to('frontend/img/banner2.jpg') }}" alt="">
+                <!-- <div class="item-content">
+                    <span style="color: white;">Áo Ngắn Tay Nam</span>
+                    <h2 style="color: white;">Kiểu dáng thời trang
+                        <br style="color: white;"> Đẳng cấp 4 mùa
+                    </h2>
+                    <p style="color: white;">Sản phẩm mới</p>
+                    <h3 style="color: white;">Giảm giá 15%</h3>
+                    <button class="shopnow"> <a style="color: white; text-decoration: none;" href="{{ URL::to('/chi-tiet-san-pham/45') }}">Mua Ngay</a></button>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- *********************** End Banner ***************** -->
+
+    <section>
+        <div class="shop-section" style="background: White;">
+            <div class="container">
+                <div class="row">
+                    <div class="services" style="flex-wrap: wrap;">
+                        <div class="services-item boder-right col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                            <a href=""><i class="fas fa-truck"></i></a>
+                            <div class="services-text">
+                                <h5>Giao Hàng Miễn Phí</h5>
+                                <p>Tất Cả Đơn Hàng</p>
                             </div>
                         </div>
-                        <div class="col-xl-3 col-lg-3 col-md-4 col-sm-4 d-none d-sm-block">
-                            <div class="hero__img" data-animation="bounceIn" data-delay=".4s">
-                                <img src="/user/img/hero/watch.png" alt="" class=" heartbeat">
+                        <div class="services-item boder-right col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                            <a href=""><i class="far fa-credit-card"></i></a>
+                            <div class="services-text">
+                                <h5>Thanh Toán An Toàn</h5>
+                                <p>An toàn 100%</p>
+                            </div>
+                        </div>
+                        <div class="services-item boder-right col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                            <a href=""><i class="far fa-comment-alt"></i></a>
+                            <div class="services-text">
+                                <h5>Hỗ Trợ 24/7</h5>
+                                <p>Hỗ trợ trực tuyến</p>
+                            </div>
+                        </div>
+                        <div class="services-item col-xl-3 col-lg-3 col-md-6 col-sm-6 col-12">
+                            <a href=""><i class="fas fa-wallet"></i></a>
+                            <div class="services-text">
+                                <h5>Bảo Hành 24 Ngày</h5>
+                                <p>Lỗi từ nhà sản xuất</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- slider Area End-->
-    <!-- ? New Product Start -->
-    <section class="new-product-area section-padding30">
-        <div class="container">
-            <!-- Section tittle -->
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="section-tittle mb-70">
-                        <h2>New Arrivals</h2>
+        <div class="shop-section-banner">
+            <div class="container">
+                <div class="row">
+                    <div class="banner-section flex" style="flex-wrap: wrap;">
+                        @if (!empty($brand_pro))
+                            @foreach ($brand_pro as $key => $brand)
+                                <div class="col-md-1"></div>
+                                <div class="banner-section col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="banner-img">
+                                        <img src="{{ URL::to('uploads/type/' . $brand->hinh_anh) }}" alt=""
+                                            style="height: 300px;">
+                                    </div>
+                                    <div class="banner-content">
+                                        <h3 style="text-transform: uppercase;">{{ $brand->ten_th }}</h3>
+                                        <p>Giảm Giá Lên Tới 50%</p>
+                                        <a href="{{ URL::to('/thuong-hieu/' . $brand->ma_th) }}" class="btn btn-3">Mua
+                                            Ngay</a>
+                                    </div>
+                                </div>
+                            @endforeach
+                        @endif
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-new-pro mb-30 text-center">
-                        <div class="product-img">
-                            <img src="/user/img/gallery/new_product1.png" alt="">
-                        </div>
-                        <div class="product-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
+        </div>
+        <div class="category-list">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="category">
+                            {{-- <div class="category-title">
+                                <h2>SẢN PHẨM NỔI BẬT</h2>
+                            </div> --}}
+                            <div class="category-section">
+                                <form method="POST">
+                                    @csrf
+                                    <div class="row">
+                                        @if (!empty($all_product_highlights))
+                                            @foreach ($all_product_highlights as $key => $product)
+                                                <input type="hidden" value="{{ $product->id }}"
+                                                    class="cart_product_id_{{ $product->id }}">
+
+                                                <input type="hidden" id="wishlist_productname{{ $product->id }}"
+                                                    value="{{ $product->name }}"
+                                                    class="cart_product_name_{{ $product->id }}">
+
+                                                <input type="hidden" value="{{ $product->amount }}"
+                                                    class="cart_product_quantity_{{ $product->id }}">
+
+                                                <input type="hidden" value="{{ $product->hinh_anh }}"
+                                                    class="cart_product_image_{{ $product->id }}">
+
+                                                <input type="hidden" id="wishlist_productprice{{ $product->id }}"
+                                                    value="{{ number_format($product->gia, 0, ',', ',') }}VNĐ">
+
+                                                <input type="hidden" value="{{ $product->gia }}"
+                                                    class="cart_product_price_{{ $product->id }}">
+
+                                                <input type="hidden" value="1"
+                                                    class="cart_product_qty_{{ $product->id }}">
+                                                <div class="item-category col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12">
+                                                    @if ($product->amount == 0)
+                                                        <div class="error">
+                                                            <p class="error-one">HẾT HÀNG</p>
+                                                        </div>
+                                                    @endif
+                                                    <div class="images-products">
+                                                        <a href="{{ route('show-detail-product', ['id' => $product->id]) }}">
+                                                            <img class="image-one"
+                                                                src="{{ URL::to('uploads/product/' . $product->hinh_anh) }}"
+                                                                alt="">
+                                                            <img class="image-two"
+                                                                src="{{ URL::to('uploads/product/' . $product->hinh_anh) }}"
+                                                                alt="">
+                                                        </a>
+                                                        <div class="love">
+                                                            <div class="love-one">
+                                                                <i class="far fa-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-products">
+                                                        <h3><a href="{{route('show-detail-product', ['id' => $product->id])}}">{{ $product->name }}</a></h3>
+                                                        <!-- <p> Mã số: 0020234</p> -->
+                                                        <div class="price-item">
+                                                            <span
+                                                                class="price">{{ number_format($product->price) . ' VNĐ' }}</span>
+                                                            <span class="price-discount"></span>
+                                                        </div>
+
+                                                        <div class="addtocart">
+                                                            <div class="shopping">
+                                                                <button type="button"
+                                                                    data-product="{{ json_encode($product) }}"
+                                                                    name="add-to-cart" class="btn add-to-cart"> <i
+                                                                        class="fas fa-shopping-cart"></i> ADD TO
+                                                                    CART</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-new-pro mb-30 text-center">
-                        <div class="product-img">
-                            <img src="/user/img/gallery/new_product2.png" alt="">
-                        </div>
-                        <div class="product-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-new-pro mb-30 text-center">
-                        <div class="product-img">
-                            <img src="/user/img/gallery/new_product3.png" alt="">
-                        </div>
-                        <div class="product-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
+            </div>
+        </div>
+        <div class="category-list">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="category">
+                            <div class="category-title">
+                                <h2>SẢN PHẨM MỚI</h2>
+                            </div>
+                            <div class="category-section">
+                                <form method="POST">
+                                    @csrf
+                                    <div class="row">
+                                        @if (!empty($products_new))
+                                            @foreach ($products_new as $key => $product)
+                                                <input type="hidden" value="{{ $product->id }}"
+                                                    class="cart_product_id_{{ $product->id }}">
+
+                                                <input type="hidden" id="wishlist_productname{{ $product->id }}"
+                                                    value="{{ $product->name }}"
+                                                    class="cart_product_name_{{ $product->id }}">
+
+                                                <input type="hidden" value="{{ $product->amount }}"
+                                                    class="cart_product_quantity_{{ $product->id }}">
+
+                                                <input type="hidden" value="{{ $product->image }}"
+                                                    class="cart_product_image_{{ $product->id }}">
+
+                                                <input type="hidden" id="wishlist_productprice{{ $product->id }}"
+                                                    value="{{ number_format($product->price, 0, ',', ',') }}VNĐ">
+                                                @if (isset($product->coupon_details) && $product->coupon_details->phantram_km > 0  && $product->coupon_details->so_luong > 0)
+                                                    <input type="hidden"
+                                                        value="{{ $product->gia - ($product->gia * $product->coupon_details->phantram_km) / 100 }}"
+                                                        class="cart_product_price_{{ $product->id }}">
+                                                @else
+                                                    <input type="hidden" value="{{ $product->price }}"
+                                                        class="cart_product_price_{{ $product->id }}">
+                                                @endif
+                                                <input type="hidden" value="1"
+                                                    class="cart_product_qty_{{ $product->id }}">
+                                                <div class="item-category col-xl-2 col-lg-3 col-md-6 col-sm-6 col-12">
+                                                    @if ($product->amount == 0)
+                                                        <div class="error">
+                                                            <p class="error-one">HẾT HÀNG</p>
+                                                        </div>
+                                                    @endif
+                                                    <div class="images-products">
+                                                        <a href="{{ route('shop.show-detail-product', ['id' => $product->id]) }}">
+                                                            <img class="image-one" height="800px"
+                                                                src="data:image/png;base64, {{$product->image}}"
+                                                                alt="">
+                                                            <img class="image-two"
+                                                                src="data:image/png;base64, {{$product->image}}"
+                                                                alt="">
+                                                        </a>
+                                                        <div class="love">
+                                                            <div class="love-one">
+                                                                <i class="far fa-heart"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-products">
+                                                        <h3><a href="{{route('shop.show-detail-product', ['id' => $product->id])}}">{{ $product->name }}</a></h3>
+                                                        <!-- <p> Mã số: 0020234</p> -->
+                                                        <div class="price-item">
+                                                            @if (isset($product->coupon_details) && $product->coupon_details->phantram_km > 0 && $product->coupon_details->so_luong > 0)
+                                                                <span
+                                                                    class="price-discount">{{ number_format($product->gia) }}
+                                                                    VNĐ</span>
+                                                                <span
+                                                                    class="price">{{ number_format($product->gia - ($product->gia * $product->coupon_details->phantram_km) / 100) }}
+                                                                    VNĐ</span>
+                                                            @else
+                                                                <span
+                                                                    class="price">{{ number_format($product->price) . ' VNĐ' }}</span>
+                                                            @endif
+                                                        </div>
+                                                        <?php 
+                                                            $user = Session::get('user');
+                                                            $check = 1;
+                                                            if ($user === null) {
+                                                                $check = 0;
+                                                            }
+                                                        ?>
+                                                        <div class="addtocart">
+                                                            <div class="shopping">
+                                                                <button type="button"
+                                                                    data-product="{{ json_encode($product) }}"
+                                                                    data-check="{{ $check }}"
+                                                                    name="add-to-cart" class="btn add-to-cart"> <i
+                                                                        class="fas fa-shopping-cart"></i> ADD TO
+                                                                    CART</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!--  New Product End -->
-    <!--? Gallery Area Start -->
-    <div class="gallery-area">
-        <div class="container-fluid p-0 fix">
-            <div class="row">
-                <div class="col-xl-6 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-gallery mb-30">
-                        <div class="gallery-img big-img" style="background-image: url(/user/img/gallery/gallery1.png);">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-gallery mb-30">
-                        <div class="gallery-img big-img" style="background-image: url(/user/img/gallery/gallery2.png);">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-3 col-lg-4 col-md-12">
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
-                            <div class="single-gallery mb-30">
-                                <div class="gallery-img small-img"
-                                    style="background-image: url(/user/img/gallery/gallery3.png);"></div>
-                            </div>
-                        </div>
-                        <div class="col-xl-12 col-lg-12  col-md-6 col-sm-6">
-                            <div class="single-gallery mb-30">
-                                <div class="gallery-img small-img"
-                                    style="background-image: url(/user/img/gallery/gallery4.png);"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!-- Gallery Area End -->
-    <!--? Popular Items Start -->
-    <div class="popular-items section-padding30">
-        <div class="container">
-            <!-- Section tittle -->
-            <div class="row justify-content-center">
-                <div class="col-xl-7 col-lg-8 col-md-10">
-                    <div class="section-tittle mb-70 text-center">
-                        <h2>Popular Items</h2>
-                        <p>Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Quis ipsum suspendisse ultrices gravida.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="/user/img/gallery/popular1.png" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="/user/img/gallery/popular2.png" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="/user/img/gallery/popular3.png" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="/user/img/gallery/popular4.png" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="/user/img/gallery/popular5.png" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6">
-                    <div class="single-popular-items mb-50 text-center">
-                        <div class="popular-img">
-                            <img src="/user/img/gallery/popular6.png" alt="">
-                            <div class="img-cap">
-                                <span>Add to cart</span>
-                            </div>
-                            <div class="favorit-items">
-                                <span class="flaticon-heart"></span>
-                            </div>
-                        </div>
-                        <div class="popular-caption">
-                            <h3><a href="product_details.html">Thermo Ball Etip Gloves</a></h3>
-                            <span>$ 45,743</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Button -->
-            <div class="row justify-content-center">
-                <div class="room-btn pt-70">
-                    <a href="catagori.html" class="btn view-btn1">View More Products</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Popular Items End -->
-    <!--? Video Area Start -->
-    <div class="video-area">
-        <div class="container-fluid">
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <div class="video-wrap">
-                        <div class="play-btn "><a class="popup-video"
-                                href="https://www.youtube.com/watch?v=KMc6DyEJp04"><i class="fas fa-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Arrow -->
-            <div class="thumb-content-box">
-                <div class="thumb-content">
-                    <h3>Next Video</h3>
-                    <a href="#"> <i class="flaticon-arrow"></i></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Video Area End -->
-    <!--? Watch Choice  Start-->
-    <div class="watch-area section-padding30">
-        <div class="container">
-            <div class="row align-items-center justify-content-between padding-130">
-                <div class="col-lg-5 col-md-6">
-                    <div class="watch-details mb-40">
-                        <h2>Watch of Choice</h2>
-                        <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                        <a href="shop.html" class="btn">Show Watches</a>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-10">
-                    <div class="choice-watch-img mb-40">
-                        <img src="/user/img/gallery/choce_watch1.png" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="row align-items-center justify-content-between">
-                <div class="col-lg-6 col-md-6 col-sm-10">
-                    <div class="choice-watch-img mb-40">
-                        <img src="/user/img/gallery/choce_watch2.png" alt="">
-                    </div>
-                </div>
-                <div class="col-lg-5 col-md-6">
-                    <div class="watch-details mb-40">
-                        <h2>Watch of Choice</h2>
-                        <p>Enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
-                        <a href="shop.html" class="btn">Show Watches</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Watch Choice  End-->
-    <!--? Shop Method Start-->
-    <div class="shop-method-area">
-        <div class="container">
-            <div class="method-wrapper">
-                <div class="row d-flex justify-content-between">
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="single-method mb-40">
-                            <i class="ti-package"></i>
-                            <h6>Free Shipping Method</h6>
-                            <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="single-method mb-40">
-                            <i class="ti-unlock"></i>
-                            <h6>Secure Payment System</h6>
-                            <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-lg-4 col-md-6">
-                        <div class="single-method mb-40">
-                            <i class="ti-reload"></i>
-                            <h6>Secure Payment System</h6>
-                            <p>aorem ixpsacdolor sit ameasecur adipisicing elitsf edasd.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Shop Method End-->
 @endsection

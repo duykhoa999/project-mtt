@@ -249,9 +249,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 var order_status = $(this).val();
                 var id_order = $(this).children(":selected").attr("id");
                 var _token = $('input[name="_token"]').val();
-                console.log(order_status,id_order)
                 $.ajax({
-                    //url: "{{route('admin.order.update-order-status')}}",
+                    url: "{{route('admin.order.update-order-status')}}",
                     method: 'POST',
                     data: {
                         _token: _token,

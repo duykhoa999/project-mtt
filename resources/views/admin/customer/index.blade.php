@@ -11,8 +11,8 @@
             <div class="row w3-res-tb">
                 <form style="float: right" action="{{ route('admin.customer.index') }}" method="get">
                     <div class="group-input f-r">
-                        <input type="text" name="key_search" value="{{ $key_search ?? '' }}" placeholder="Tìm kiếm">
-                        <button class="btn btn-primary" type="submit">Tìm Kiếm</button>
+                        <input type="text" name="keyword" value="{{ $param['keyword'] ?? '' }}">
+                        <button class="btn btn-primary" type="submit">Search</button>
                     </div>
                 </form>
             </div>
@@ -34,16 +34,23 @@
                             <th>No. </th>
                             <th>Name</th>
                             <th>Address</th>
+                            <th>Email</th>
+                            <th>Birthday</th>
                             <th>Phone</th>
                             {{-- <th style="width:30px;">Hành động</th> --}}
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($customer_paginate as $key => $row)
+                            @if ($row->role->id == 1)
+                                @continue;
+                            @endif
                             <tr>
                                 <td><label class="i-checks m-b-none">{{ ($key+1) }}</td>
-                                <td>{{ $row->name }}</td>
+                                <td>{{ $row->first_name . ' ' . $row->last_name }}</td>
                                 <td>{{ $row->address }}</td>
+                                <td>{{ $row->email }}</td>
+                                <td>{{ date('d-M-Y', strtotime($row->dob)) }}</td>
                                 <td>{{ $row->phone }}</td>
                                 {{-- <td>
                                     <a href="{{ route('admin.customer.show', ['id' => $row->ma_kh]) }}"
@@ -71,7 +78,7 @@
                 <div class="row">
 
                     <div class="col-sm-5 text-center">
-                        <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small>
+                        {{-- <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small> --}}
                     </div>
                     <div class="col-sm-7 text-right text-center-xs">
                         <ul class="pagination pagination-sm m-t-none m-b-none">

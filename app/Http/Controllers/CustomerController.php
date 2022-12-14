@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\View;
 
 class CustomerController extends AppController
 {
-    const NAME = '/customer/';
+    const NAME = '/user/';
 
     public function __construct()
     {
@@ -22,8 +22,12 @@ class CustomerController extends AppController
     public function index()
     {
         $all_customer = [];
+        $param['keyword'] = '';
 
-        $data = $this->call(self::NAME, 'GET');
+        if (isset($_GET['keyword']))
+            $param['keyword'] = $_GET['keyword'];
+
+        $data = $this->call(self::NAME, 'GET', $param);
         if ($data !== false) {
             $all_customer = json_decode($data)->data;
         }
@@ -31,7 +35,7 @@ class CustomerController extends AppController
         $customer_paginate = $paginate['final'];
         $url = 'customers';
 
-        return view('admin.customer.index', compact('customer_paginate', 'paginate', 'url'));
+        return view('admin.customer.index', compact('customer_paginate', 'paginate', 'url', 'param'));
     }
 
     /**

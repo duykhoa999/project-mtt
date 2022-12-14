@@ -14,7 +14,7 @@
                             style="margin-left: 10px">Product</span></i></a>
                 <form style="float: right" action="{{ route('admin.product.index') }}" method="get">
                     <div class="group-input f-r">
-                        <input type="text" name="key_search" value="{{ $key_search ?? '' }}" placeholder="Search">
+                        <input type="text" name="keyword" value="{{ $param['keyword'] ?? '' }}" placeholder="Search">
                         <button class="btn btn-primary" type="submit">Search</button>
                     </div>
                 </form>
@@ -60,8 +60,8 @@
                                 <td>{{ $pro->amount }}</td>
                                 <td>{{ $pro->slug }}</td>
                                 <td>{{ number_format($pro->price, 0, ',', ',') }}đ</td>
-                                <td>{{ $pro->category_id }}</td>
-                                <td>{{ $pro->vendor_id }}</td>
+                                <td>{{ $pro->category->name }}</td>
+                                <td>{{ $pro->vendor->first_name . ' ' . $pro->vendor->last_name }}</td>
 
                                 <td>
                                     <a href="{{ route('admin.product.show', ['id' => $pro->id]) }}"
@@ -89,7 +89,7 @@
                 <div class="row">
 
                     <div class="col-sm-5 text-center">
-                        <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small>
+                        {{-- <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small> --}}
                     </div>
                     <div class="col-sm-7 text-right text-center-xs">
                         <ul class="pagination pagination-sm m-t-none m-b-none">

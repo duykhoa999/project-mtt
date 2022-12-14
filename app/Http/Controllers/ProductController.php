@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\View;
 
 class ProductController extends AppController
@@ -22,8 +23,12 @@ class ProductController extends AppController
     public function index()
     {
         $all_product = [];
+        $param['keyword'] = '';
 
-        $data = $this->call(self::NAME, 'GET');
+        if (isset($_GET['keyword']))
+            $param['keyword'] = $_GET['keyword'];
+
+        $data = $this->call(self::NAME, 'GET', $param);
         if ($data !== false) {
             $all_product = json_decode($data)->data;
         }
@@ -32,7 +37,7 @@ class ProductController extends AppController
         $product_paginate = $paginate['final'];
         $url = 'products';
 
-        return view('admin.product.index', compact('product_paginate', 'paginate', 'url'));
+        return view('admin.product.index', compact('product_paginate', 'paginate', 'url', 'param'));
     }
 
     /**
@@ -43,21 +48,14 @@ class ProductController extends AppController
     public function create()
     {
         $list_category = [];
-        $list_vendor = [
-            0 => (object)[
-                'id' => 1,
-                'name' => 'Bùi Duy Khoa'
-            ],
-            1 => (object)[
-                'id' => 2,
-                'name' => 'Duy Khoa'
-            ]
-        ];
-        $data_category = $this->call('/category/', 'GET');
+        $list_vendor = [];
+        $param['keyword'] = '';
+
+        $data_category = $this->call('/category/', 'GET', $param);
         if ($data_category !== false) {
             $list_category = json_decode($data_category)->data;
         }
-        $data_vendor = $this->call('/vendor/', 'GET');
+        $data_vendor = $this->call('/vendor/', 'GET', $param);
         if ($data_vendor !== false) {
             $list_vendor = json_decode($data_vendor)->data;
         }
@@ -74,13 +72,34 @@ class ProductController extends AppController
     public function store(Request $request)
     {
         $param = $request->all();
-        $param['image'] = base64_encode(file_get_contents($request->file('image')));
+        $valid = Validator::make(
+            $param,
+            [
+                'code' => 'required',
+                'name' => 'required',
+                'amount' => 'required',
+                'price' => 'required',
+                'image' => 'required',
+                'category_id' => 'required',
+                'vendor_id' => 'required',
+            ],
+            [
+                'vendor_id.required' => 'Please choose one Vendor!',
+                'category_id.required' => 'Please choose one Category!',
+                'image.required' => 'Please choose one image!',
+            ]
+        );
+        if ($valid->fails()) {
+            return redirect()->back()->withErrors($valid)->withInput();
+        } else {
+            $param['image'] = base64_encode(file_get_contents($request->file('image')));
 
-        $data = $this->call(self::NAME, 'POST', $param);
-        if ($data !== false) {
-            return redirect()->route('admin.product.create')->with('message', "Add product successfully!");
+            $data = $this->call(self::NAME, 'POST', $param);
+            if ($data !== false) {
+                return redirect()->route('admin.product.create')->with('message', "Add product successfully!");
+            }
+            return redirect()->route('admin.product.create')->with('error', "Add product failed!");
         }
-        return redirect()->route('admin.product.create')->with('error', "Add product failed!");
     }
 
     /**
@@ -91,7 +110,32 @@ class ProductController extends AppController
      */
     public function show($id)
     {
-        //
+        $product = null;
+
+        $list_category = [];
+        $list_vendor = [];
+        $param['keyword'] = '';
+
+        $data_category = $this->call('/category/', 'GET', $param);
+        if ($data_category !== false) {
+            $list_category = json_decode($data_category)->data;
+        }
+        $data_vendor = $this->call('/vendor/', 'GET', $param);
+        if ($data_vendor !== false) {
+            $list_vendor = json_decode($data_vendor)->data;
+        }
+        
+
+        $data = $this->call(self::NAME . $id, 'GET', []);
+        if ($data !== false) {
+            $product = json_decode($data)->data;
+        }
+
+        if(empty($product)) {
+            return redirect()->route('admin.product.index')->with('error', "Cannot find this product! Please, try again!");
+        }
+
+        return view('admin.product.show', compact('product', 'list_vendor', 'list_category'));
     }
 
     /**
@@ -100,9 +144,51 @@ class ProductController extends AppController
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, Request $request)
     {
-        //
+        $param = $request->all();
+
+        $product = null;
+
+        $data_product = $this->call(self::NAME . $id, 'GET', []);
+        if ($data_product !== false) {
+            $product = json_decode($data_product)->data;
+        }
+
+        if(empty($product)) {
+            return redirect()->route('admin.product.index')->with('error', "Cannot find this product! Please, try again!");
+        }
+
+        $valid = Validator::make(
+            $param,
+            [
+                'code' => 'required',
+                'name' => 'required',
+                'amount' => 'required',
+                'price' => 'required',
+                'category_id' => 'required',
+                'vendor_id' => 'required',
+            ],
+            [
+                'vendor_id.required' => 'Please choose one Vendor!',
+                'category_id.required' => 'Please choose one Category!',
+            ]
+        );
+        if ($valid->fails()) {
+            return redirect()->back()->withErrors($valid)->withInput();
+        } else {
+            if (!empty($request->file('image'))) {
+                $param['image'] = base64_encode(file_get_contents($request->file('image')));
+            }
+            else {
+                $param['image'] = $product->image;
+            }
+            $call_edit = $this->call(self::NAME . $id, 'PUT', $param);
+            if ($call_edit !== false) {
+                return redirect()->route('admin.product.edit', ['id' => $id])->with('message', "Edit product successfully!");
+            }
+            return redirect()->route('admin.product.edit', ['id' => $id])->with('error', "Edit product failed!");
+        }
     }
 
     /**

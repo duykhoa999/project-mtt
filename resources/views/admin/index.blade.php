@@ -1,5 +1,4 @@
 @extends('admin.layouts.master')
-@section('title', "Dashboard")
 @section('admin_content')
 <div class="container-fluid">
     <style type="text/css">
@@ -85,52 +84,41 @@
 <!-- // thống kê trạng thái đơn hàng -->
     <script type="text/javascript">
         $(document).ready(function() {
+            // Morris.Donut({
+            //     element: 'donut-example',
+            //     resize: true,
+            //     colors: ['#F11142', '#4211F1', '#11DBF1', '#11F137', '#F1E611'],
+
+            //     data: [{
+            //             label: "Đơn Hàng Mới ",
+            //             value: <?php echo $order1 ?? '' ?>
+            //         },
+            //         {
+            //             label: "Đã duyệt",
+            //             value: <?php echo $order2 ?? '' ?>
+            //         },
+            //         {
+            //             label: "Phân công nhân viên",
+            //             value: <?php echo $order3 ?? '' ?>
+            //         },
+            //         {
+            //             label: "Hoàn tất",
+            //             value: <?php echo $order4 ?? '' ?>
+            //         },
+            //         {
+            //             label: "Hủy Hàng",
+            //             value: <?php echo $order5 ?? '' ?>
+            //         }
+            //     ]
+            // });
             Morris.Donut({
-                element: 'donut-example',
+                element: 'donut-product',
                 resize: true,
                 colors: ['#F11142', '#4211F1', '#11DBF1', '#11F137', '#F1E611'],
-
                 data: [{
-                        label: "Đơn Hàng Mới ",
-                        value: <?php echo $order1 ?? '' ?>
-                    },
-                    {
-                        label: "Đã duyệt",
-                        value: <?php echo $order2 ?? '' ?>
-                    },
-                    {
-                        label: "Phân công nhân viên",
-                        value: <?php echo $order3 ?? '' ?>
-                    },
-                    {
-                        label: "Hoàn tất",
-                        value: <?php echo $order4 ?? '' ?>
-                    },
-                    {
-                        label: "Hủy Hàng",
-                        value: <?php echo $order5 ?? '' ?>
-                    }
-                ]
+                    label: "Tổng Sản Phẩm ",
+                    value: <?php echo $total_product ?? '' ?>
+                }]
             });
-            Morris.Donut({
-            element: 'donut-product',
-            resize: true,
-            colors: ['#F11142', '#4211F1', '#11DBF1', '#11F137', '#F1E611'],
-            data: [{
-                label: "Tổng Sản Phẩm ",
-                value: <?php echo $total_product ?? '' ?>
-            }]
-            });
-        });
-    </script>
-    <script type="text/javascript">
-        Morris.Donut({
-            element: 'donut-product',
-            resize: true,
-            colors: ['#F11142', '#4211F1', '#11DBF1', '#11F137', '#F1E611'],
-            data: [{
-                label: "Tổng Sản Phẩm ",
-                value: <?php echo $total_product ?? '' ?>
-            }]
         });
     </script>

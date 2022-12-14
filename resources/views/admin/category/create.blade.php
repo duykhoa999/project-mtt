@@ -22,22 +22,22 @@
                 <div class="position-center">
                     <form role="form" action="{{route('admin.category.store')}}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
-                        {{-- <div class="form-group">
-                            <label for="exampleInputEmail1">Mã loại rượu</label>
-                            <input type="text" maxlength="10" name="ma_lr" value="{{old('ma_lr')}}" class="form-control " placeholder="Mã loại rượu" required>
-                            @if ($errors->has('ma_lr'))
-                            <span style="color: red; font-weight: 700;">{{$errors->first('ma_lr')}}</span>
-                            @endif
-                        </div> --}}
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Name</label>
+                            <label for="exampleInputCode">Code</label>
+                            <input type="text" name="code" value="{{old('code')}}" class="form-control" placeholder="code" required>
+                            @if ($errors->has('code'))
+                            <span style="color: red; font-weight: 700;">{{$errors->first('code')}}</span>
+                            @endif
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputName">Name</label>
                             <input type="text" name="name" value="{{old('name')}}" class="form-control" placeholder="Name" required onkeyup="ChangeToSlug();" id="slug">
                             @if ($errors->has('name'))
                             <span style="color: red; font-weight: 700;">{{$errors->first('name')}}</span>
                             @endif
                         </div>
                         <div class="form-group">
-                            <label for="exampleInputEmail1">Slug</label>
+                            <label for="exampleInputSlug">Slug</label>
                             <input type="text" name="slug" value="{{old('slug')}}" class="form-control" id="convert_slug">
                             @if ($errors->has('slug'))
                             <span style="color: red; font-weight: 700;">{{$errors->first('slug')}}</span>

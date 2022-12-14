@@ -22,6 +22,12 @@
                     </a>
                 </li>
                 <li class="sub-menu">
+                    <a href="{{route('admin.user.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.user')) ? 'active' : ''}}">
+                        <i class="fa fa-book"></i>
+                        <span>Staff</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
                     <a href="{{route('admin.import.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.import')) ? 'active' : ''}}">
                         <i class="fa fa-money"></i>
                         <span>Import</span>
@@ -31,6 +37,27 @@
                     <a href="{{route('admin.product.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.product')) ? 'active' : ''}}">
                         <i class="fa fa-book"></i>
                         <span>Product</span>
+                    </a>
+
+                </li>
+                <li class="sub-menu">
+                    <a href="{{route('admin.vendor.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.vendor')) ? 'active' : ''}}">
+                        <i class="fa fa-book"></i>
+                        <span>Vendor</span>
+                    </a>
+
+                </li>
+                <li class="sub-menu">
+                    <a href="{{route('admin.vendor_order.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.vendor_order')) ? 'active' : ''}}">
+                        <i class="fa fa-book"></i>
+                        <span>Vendor Order</span>
+                    </a>
+
+                </li>
+                <li class="sub-menu">
+                    <a href="{{route('admin.order.index')}}" class="{{(isset($controller) && $controller == config('define.controller.admin.order')) ? 'active' : ''}}">
+                        <i class="fa fa-book"></i>
+                        <span>Customer Order</span>
                     </a>
 
                 </li>

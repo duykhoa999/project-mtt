@@ -15,8 +15,18 @@ class AdminController extends AppController
 		parent::__construct();
 	}
 
-    public function index() {
+    public function index() 
+    {
+        $total_product = 0;
 
-        return view('admin.index');
+        $data_product = $this->call('/product/', 'GET', ['keyword' => '']);
+        if ($data_product !== false) {
+            $all_product = json_decode($data_product)->data;
+            foreach($all_product as $item) {
+                $total_product += $item->amount;
+            }
+        }
+
+        return view('admin.index', compact('total_product'));
     }
 }

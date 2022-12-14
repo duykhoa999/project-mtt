@@ -14,7 +14,7 @@
                         onclick="window.location.assign('{{ route('admin.category.create') }}')"><span style="margin-left: 10px">Category</span></i></a>
                 <form style="float: right" action="{{ route('admin.category.index') }}" method="get">
                     <div class="group-input f-r">
-                        <input type="text" name="key_search" value="{{ $key_search ?? '' }}" placeholder="Search">
+                        <input type="text" name="keyword" value="{{ $param['keyword'] ?? '' }}" placeholder="Search">
                         <button class="btn btn-primary" type="submit">Search</button>
                     </div>
                 </form>
@@ -35,6 +35,7 @@
                     <thead>
                         <tr>
                             <th>No.</th>
+                            <th>Code</th>
                             <th>Name</th>
                             <th>Slug</th>
                             <th style="width:30px;">Action</th>
@@ -44,6 +45,7 @@
                         @foreach ($category_paginate as $key => $row)
                             <tr>
                                 <td><label class="i-checks m-b-none">{{ ($key + 1) }}</td>
+                                <td>{{ $row->code }}</td>
                                 <td>{{ $row->name }}</td>
                                 <td>{{ $row->slug }}</td>
                                 <td>
@@ -72,7 +74,7 @@
                 <div class="row">
 
                     <div class="col-sm-5 text-center">
-                        <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small>
+                        {{-- <small class="text-muted inline m-t-sm m-b-sm">showing 20-30 of 50 items</small> --}}
                     </div>
                     <div class="col-sm-7 text-right text-center-xs">
                         <ul class="pagination pagination-sm m-t-none m-b-none">

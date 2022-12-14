@@ -23,19 +23,23 @@
                         <form role="form" action="{{ route('admin.product.store') }}" method="post"
                             enctype="multipart/form-data">
                             {{ csrf_field() }}
-                            {{-- <div class="form-group">
-                            <label for="exampleInputEmail1">Mã dòng rượu</label>
-                            <input type="text" maxlength="10" name="ma_dr" value="{{old('ma_dr')}}" class="form-control " placeholder="Mã dòng rượu" required>
-                            @if ($errors->has('ma_dr'))
-                            <span style="color: red; font-weight: 700;">{{$errors->first('ma_dr')}}</span>
-                            @endif
-                        </div> --}}
+                            <div class="form-group">
+                                <label for="exampleInputCode">Code</label>
+                                <input type="text" data-validation="length" value="{{ old('code') }}"
+                                    data-validation-length="min10"
+                                    data-validation-error-msg="Please enter at least 10 characters!" name="code"
+                                    class="form-control"
+                                    onkeyup="ChangeToSlug();">
+                                @if ($errors->has('code'))
+                                    <span style="color: red; font-weight: 700;">{{ $errors->first('code') }}</span>
+                                @endif
+                            </div>
                             <div class="form-group">
                                 <label for="exampleInputEmail1">Name</label>
                                 <input type="text" data-validation="length" value="{{ old('name') }}"
                                     data-validation-length="min10"
                                     data-validation-error-msg="Please enter at least 10 characters!" name="name"
-                                    class="form-control " id="slug" placeholder="Tên dòng rượu"
+                                    class="form-control " id="slug"
                                     onkeyup="ChangeToSlug();">
                                 @if ($errors->has('name'))
                                     <span style="color: red; font-weight: 700;">{{ $errors->first('name') }}</span>
@@ -83,14 +87,6 @@
                                     <span style="color: red; font-weight: 700;">{{ $errors->first('description') }}</span>
                                 @endif
                             </div>
-                            {{-- <div class="form-group">
-                                <label for="exampleInputPassword1">Nội dung sản phẩm</label>
-                                <textarea style="resize: none" rows="8" class="form-control" name="noi_dung" id="id4"
-                                    placeholder="Nội dung sản phẩm">{{ old('noi_dung') }}</textarea>
-                                @if ($errors->has('noi_dung'))
-                                    <span style="color: red; font-weight: 700;">{{ $errors->first('noi_dung') }}</span>
-                                @endif
-                            </div> --}}
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Category</label>
                                 <select name="category_id" class="form-control input-sm m-bot15">
@@ -103,6 +99,9 @@
                                         @endforeach
                                     @endif
                                 </select>
+                                @if ($errors->has('category_id'))
+                                    <span style="color: red; font-weight: 700;">{{ $errors->first('category_id') }}</span>
+                                @endif
                             </div>
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Vendor</label>
@@ -111,11 +110,14 @@
                                     @if (!empty($list_vendor))
                                         @foreach ($list_vendor as $key_vendor => $vendor)
                                             <option value="{{ $vendor->id }}"
-                                                {{ old('id') == $vendor->id ? 'selected' : '' }}>{{ $vendor->name }}
+                                                {{ old('id') == $vendor->id ? 'selected' : '' }}>{{ $vendor->first_name . ' ' . $vendor->last_name }}
                                             </option>
                                         @endforeach
                                     @endif
                                 </select>
+                                @if ($errors->has('vendor_id'))
+                                    <span style="color: red; font-weight: 700;">{{ $errors->first('vendor_id') }}</span>
+                                @endif
                             </div>
                             <button type="submit" name="add_product" class="btn btn-info">Submit</button>
                             <button type="button" class="btn btn-default"
